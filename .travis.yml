@@ -1,15 +1,17 @@
 osx_image: xcode9
 language: objective-c
 cache:
-  - bundler
-  - cocoapods
+- bundler
+- cocoapods
 branches:
   only:
-    - develop
-    - master
+  - develop
+  - master
 notifications:
   email: false
+  slack:
+    secure: k/ArxVzkTShjbynucgedeyZ9Muamr7NapYQt7DmedAB62Ov1xfV7yZEPXqpWxvfxBAQPByX3EjCjaRvgTdkM7kCukU55mMmYl/bcdXHLDUjQs3Y4UpJL7JT76rvJzNz5Fl0yRcFlE6olhMUYY8EvAdCNSFoNRR8e5oxS58RWNYCNiNOKvqYo6v06/RYe/JFlgwr5heB1WJpuMbIu6uaukRSAVlilOApmmio1M4QHDiufsKdcofwfTC9JTt7i1yz3QSVoIkPNN8jtCzs7DgWboU5dmB2hJf7iekMHrLecKbUBIN5NPMonu+5VR7HN4nU3wXvq+aswq9J0mqz9L7GcL0w3Nmo0Mvgw5vn5tp1cGSn9vYnlxfiOrzymgmJOlMI3xOjRQHkx2U7aUKxpzZMIEqO/npkfYQSs5qzegFzoUCJm6k/0k1IlYmGld6PiNZTnXiFwuj9cpxhKxxXKto0+YsqaNNMgbqym9YJtmBDEruirh9G7K4yv/0Qc0OwOJsu1/eshRjlDCbBMZGxwCI/GfukrQ6Hc4FVkCPOpYLoTZkbx7p1N//dyf3Bf8D2K9dYYNCD60vxhS5sE+m83yfk9z6U6zL0VmDoZErb1zPoS+wv72k0Eep+IQIC3CXlf7Xwz0R+IFViqRZacQGexcYKy0fI9HzoXLAJFJWrA8ck0iPo=
 before_install:
-  - gem install bundler
-  - bundle install
+- gem install bundler
+- bundle install
 script: bundle exec fastlane funky
